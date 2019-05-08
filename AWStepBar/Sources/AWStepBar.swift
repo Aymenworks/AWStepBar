@@ -33,12 +33,10 @@ public class AWStepBar: UIView {
         
         if animated {
             self.layoutIfNeeded()
-            let animator = UIViewPropertyAnimator(duration: 0.7, dampingRatio: 0.6) {
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
                 self.foregroundViewTrailingConstraint?.constant = -trailing
                 self.layoutIfNeeded()
-            }
-            
-            animator.startAnimation()
+            }, completion: nil)
 
         } else {
             self.foregroundViewTrailingConstraint?.constant = -trailing
@@ -187,6 +185,8 @@ fileprivate class StepBarItem: UIView {
     
     init() {
         super.init(frame: .zero)
+        
+        backgroundColor = .clear
         
         addSubview(dotView)
         
