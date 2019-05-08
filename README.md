@@ -11,7 +11,7 @@ AWStepBar is a UI Component that allows you to integrate a step progress UI with
 ###  Behind the scenes
 
 As simple as:
-![Whimsical AWStepBar](./AWStepBar.png)
+![Whimsical AWStepBar](./AWStepBarWhimsical.png)
 
 ## 🔶 Requirements
 
