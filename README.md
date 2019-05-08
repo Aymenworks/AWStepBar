@@ -2,8 +2,6 @@
  
 AWStepBar is a UI Component that allows you to integrate a step progress UI within your app.
 
----
-
 ## Overview
 
 ### Appareance
