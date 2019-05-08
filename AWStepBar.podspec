@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AWStepBar"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "AWStepBar is a UI Component that allows you to integrate a step progress UI within your app."
 
   spec.description  = <<-DESC
