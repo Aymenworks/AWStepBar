@@ -22,19 +22,12 @@ As simple as:
 
 ```swift
 let stepBar = AWStepBar()
-stepBar.dataSource = self
+stepBar.numberOfSteps = 3
 stepBar.stepBarForegroundColor = .green
 stepBar.stepBarBackgroundColor = .lightGray
 stepBar.dotColor = .gray
 stepBar.dotSelectedColor = .white
 stepBar.set(step: 1, animated: false)
-```
-
-DataSource
-```swift
-public protocol AWStepBarDataSource: class {
-    func numberOfSteps(in stepBar: AWStepBar) -> Int
-}
 ```
 
 ## Installation
