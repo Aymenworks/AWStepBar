@@ -10,10 +10,6 @@ import Foundation
 import Foundation
 import UIKit
 
-public protocol AWStepBarDataSource: class {
-    func numberOfSteps(in stepBar: AWStepBar) -> Int
-}
-
 public class AWStepBar: UIView {
     
     // MARK: Developer Experience - How to use this component
@@ -24,8 +20,8 @@ public class AWStepBar: UIView {
 
         guard didLayoutSubview else { return }
 
-        guard let numberOfSteps = dataSource?.numberOfSteps(in: self) else {
-            assertionFailure("AWStepBarDataSource is not implemented")
+        guard numberOfSteps != nil else {
+            assertionFailure("numberOfDigits property is not set")
             return
         }
         
@@ -43,7 +39,7 @@ public class AWStepBar: UIView {
         }
     }
     
-    public weak var dataSource: AWStepBarDataSource?
+    public var numberOfSteps: Int!
     
     // MARK: Customization - What can be customized
 
@@ -98,8 +94,8 @@ public class AWStepBar: UIView {
             setup()
         }
         
-        guard let numberOfSteps = dataSource?.numberOfSteps(in: self) else {
-            assertionFailure("AWStepBarDataSource is not implemented")
+        guard numberOfSteps != nil else {
+            assertionFailure("numberOfDigits property is not set")
             return
         }
         
@@ -125,8 +121,8 @@ public class AWStepBar: UIView {
         stackView.distribution = .fillEqually
         stackView.spacing = 0
         
-        guard let numberOfSteps = dataSource?.numberOfSteps(in: self) else {
-            assertionFailure("AWStepBarDataSource is not implemented")
+        guard numberOfSteps != nil else {
+            assertionFailure("numberOfDigits property is not set")
             return
         }
         

@@ -9,11 +9,11 @@
 import UIKit
 import AWStepBar
 
-class ViewController: UIViewController, AWStepBarDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var storyboardStepBar: AWStepBar! {
         didSet {
-            storyboardStepBar.dataSource = self
+            storyboardStepBar.numberOfSteps = 3
             storyboardStepBar.dotColor = .gray
             storyboardStepBar.set(step: 2, animated: false)
             storyboardStepBar.dotSelectedColor = .white
@@ -28,7 +28,7 @@ class ViewController: UIViewController, AWStepBarDataSource {
         super.viewDidLoad()
         
         view.addSubview(stepBar)
-        stepBar.dataSource = self
+        stepBar.numberOfSteps = 4
         stepBar.dotColor = .gray
         stepBar.dotSelectedColor = .white
         stepBar.stepBarForegroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
